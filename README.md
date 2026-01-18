@@ -52,11 +52,11 @@ Refer to `auth_structure.txt` for detailed information about:
 
 ## Technology Stack
 
-- **Frontend**: [To be specified]
-- **Backend**: [To be specified]
-- **Database**: [To be specified]
-- **Real-time Communication**: [To be specified]
-- **Monitoring Systems**: [To be specified]
+- **Frontend**: Flutter Figma
+- **Backend**: Python, C++
+- **Database**: Firebase, MongoDB, Redis
+- **Real-time Communication**: Custom Backend
+- **Monitoring Systems**: Fitness Band(Hardwere Device)
 
 ## Installation & Setup
 
