@@ -1,0 +1,217 @@
+==================================================
+VRUDHSEVA – AUTHENTICATION & ONBOARDING STRUCTURE
+==================================================
+
+--------------------------------------------------
+1. USER ROLES (SYSTEM LEVEL)
+--------------------------------------------------
+UserRole:
+- elder
+- family
+- caretaker
+
+NOTE:
+This role is selected ONCE during onboarding
+and is used throughout login & signup.
+
+
+--------------------------------------------------
+2. ONBOARDING FLOW
+--------------------------------------------------
+
+Onboarding-1
+  |
+  v
+Onboarding-2
+  |
+  v
+Onboarding-3
+  |
+  v
+Role Selection Screen (Level 1)
+--------------------------------
+Options:
+1. I am an Elder
+2. I am a Family Member / Caretaker
+
+Decision:
+- If "Elder"
+    -> set UserRole = elder
+    -> Navigate to LOGIN
+
+- If "Family Member / Caretaker"
+    -> Navigate to Onboarding-4
+
+
+--------------------------------------------------
+3. ONBOARDING-4 (Role Selection Level 2)
+--------------------------------------------------
+
+Onboarding-4
+--------------------------------
+Options:
+1. I am a Family Member
+2. I am a Caretaker
+
+Decision:
+- If "Family Member"
+    -> set UserRole = family
+    -> Navigate to LOGIN
+
+- If "Caretaker"
+    -> set UserRole = caretaker
+    -> Navigate to LOGIN
+
+
+--------------------------------------------------
+4. LOGIN FLOW (SINGLE LOGIN SCREEN)
+--------------------------------------------------
+
+Login Screen (ONE SCREEN FOR ALL ROLES)
+
+Fields shown based on UserRole:
+
+If UserRole == elder:
+- Hardware UID (Fitness Band ID)
+
+If UserRole == family:
+- Family UID
+
+If UserRole == caretaker:
+- Caretaker UID
+
+Common elements:
+- Login Button
+- Forgot Password
+- Don't have an account? Sign Up
+
+
+--------------------------------------------------
+5. SIGNUP ENTRY LOGIC (FROM LOGIN SCREEN)
+--------------------------------------------------
+
+When user clicks "Sign Up":
+
+Decision:
+- If UserRole == caretaker
+    -> Navigate to CARETAKER SIGNUP FLOW
+
+- If UserRole == elder OR family
+    -> Navigate to COMMON SIGNUP FLOW
+
+
+--------------------------------------------------
+6. COMMON SIGNUP FLOW (ELDER + FAMILY)
+--------------------------------------------------
+
+Common Signup consists of 3 steps.
+
+--------------------------------------------------
+Signup Step 1 (COMMON FOR ELDER & FAMILY)
+--------------------------------------------------
+- Basic personal details
+- Contact information
+- No role-based difference
+
+
+--------------------------------------------------
+Signup Step 2 (COMMON FOR ELDER & FAMILY)
+--------------------------------------------------
+- Additional personal / account information
+- No role-based difference
+
+
+--------------------------------------------------
+Signup Step 3 (COMMON FOR ELDER & FAMILY)
+--------------------------------------------------
+- Additional personal / account information
+- No role-based difference
+
+Contine to (sucessfully account created page)
+
+
+--------------------------------------------------
+Account created page (ROLE-BASED QUESTIONS)
+--------------------------------------------------
+
+click on get started button -> 
+
+If UserRole == elder:
+- Elder-specific questions (2 pop-up)
+- Elder-specific radio buttons / popup
+- Example(pop-up 1):
+  - Consent for wearable-based health monitoring: radio button(yes / no)
+  - Consent for automatic emergency alerts during critical events: radio button(yes / no)
+  - Consent to share alerts with family/caregivers: radio button(yes / no)
+- Example(pop-up 2):
+  - In critical situations (e.g., fall, cardiac risk), should emergency alerts trigger automatically without confirmation?: radio button(yes / no)
+  (show note  : These settings exist to protect life in time-critical situations. Emergency override activates only when confirmed risk is detected by the system intelligence.)
+
+If UserRole == family:
+- Family-specific questions (2 pop-up)
+- Family-specific radio buttons / popup
+- Example(pop-up 1):
+  - Are you willing to act as the Primary Emergency Contact?: radio button(yes / no)
+  - Preferred Emergency Alert Mode: radio button(Call + App Notification / App Notification only)
+
+- Example(pop-up 2):
+  - I understand I have full access responsibility: chackbox
+  - I understand emergency alerts may trigger automatically: chackbox
+  - I agree to act in the elder’s best interest: chackbox
+
+
+navigatte to home page
+
+--------------------------------------------------
+7. CARETAKER SIGNUP FLOW (SEPARATE)
+--------------------------------------------------
+
+Caretaker Signup (Different Flow)
+
+Includes:
+- Professional details
+- ID verification
+- Experience
+- Service area
+- Availability
+
+NOTE:
+This flow is completely independent from
+elder/family signup.
+
+
+--------------------------------------------------
+8. POST-SIGNUP RESULT
+--------------------------------------------------
+
+After successful signup:
+
+If UserRole == elder:
+- Link hardware UID
+- Go to Elder Dashboard
+
+If UserRole == family:
+- Link to elder account
+- Go to Family Dashboard
+
+If UserRole == caretaker:
+- Verification / approval process
+- Go to Caretaker Dashboard (or pending state)
+
+
+--------------------------------------------------
+9. CORE DESIGN PRINCIPLES (IMPORTANT)
+--------------------------------------------------
+
+- ONE onboarding flow
+- ONE login screen
+- ONE signup flow for elder + family
+- ONE separate signup flow for caretaker
+- Role decides behavior, NOT UI duplication
+- No repeated screens
+- No role confusion for elderly users
+
+==================================================
+END OF STRUCTURE
+==================================================
+
