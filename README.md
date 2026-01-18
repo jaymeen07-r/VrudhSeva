@@ -99,17 +99,48 @@ Contains visual documentation:
 - UI mockups and wireframes
 - Process flowcharts
 
-## Contributing
+## Contribution Guidelines
 
-[Contribution guidelines to be added]
+Contributions are welcome to improve this project in a **controlled and meaningful way**. Before contributing, please read the guidelines below carefully.
+
+### How to Contribute
+
+1. Fork the repository to your GitHub account
+2. Create a new feature branch
+   ```bash
+   git checkout -b feature/short-description
+   ```
+3. Make your changes following the project's coding standards
+4. Commit with a clear and descriptive message
+   ```bash
+   git commit -m "Add: brief description of the change"
+   ```
+5. Push the branch to your fork
+   ```bash
+   git push origin feature/short-description
+   ```
+6. Open a Pull Request with a clear explanation of:
+   * What was changed
+   * Why the change is needed
+   * Any related issues or enhancements
+
+### Contribution Standards
+
+- Write clear, descriptive commit messages
+- Add comments for complex logic
+- Do not include sensitive data or credentials
+- Ensure no breaking changes to existing functionality
+- Test your changes thoroughly
 
 ## License
 
-[License information to be added]
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
 ## Contact & Support
 
-[Contact information to be added]
+* **Developer:** JAYMEEN N. VAGHELA
+* **Email:** [jaymeenvaghela07@gmail.com](mailto:jaymeenvaghela07@gmail.com)
+* **GitHub:** [github.com/jaymeen07-r](https://github.com/jaymeen07-r)
 
 ## Development Notes
 
@@ -117,6 +148,10 @@ Contains visual documentation:
 - Multi-role support ensures flexibility for different stakeholder needs
 - Privacy and security are paramount in healthcare applications
 - The system is designed to minimize user friction while maximizing safety
+
+### Report Issues
+
+For bug reports, feature requests, or general inquiries, please open an [Issue](https://github.com/jaymeen07-r/VrudhSeva/issues) on GitHub.
 
 ## Roadmap
 
