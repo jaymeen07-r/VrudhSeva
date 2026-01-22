@@ -52,10 +52,10 @@ Refer to `auth_structure.txt` for detailed information about:
 
 ## Technology Stack
 
-- **Frontend**: Flutter Figma
-- **Backend**: Python, C++
+- **Frontend**: Flutter, Figma
+- **Backend**: Python, C++, java
 - **Database**: Firebase, MongoDB, Redis
-- **Real-time Communication**: Custom Backend
+- **Real-time Communication**: Custom Backend, Twilio, WebSockets
 - **Monitoring Systems**: Fitness Band(Hardwere Device)
 
 ## Installation & Setup
