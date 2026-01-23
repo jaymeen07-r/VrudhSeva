@@ -22,9 +22,19 @@ Vrudhseva is an intelligent elder-care platform that monitors health and safety 
 VrudhSeva/
 ├── Assets/                      # Project assets directory
 │   └── images/                  # Image files and diagrams
-│       ├── .gitkeep            # Ensures directory is tracked
+│       ├── .gitkeep             # Ensures directory is tracked
 │       └── [other image files]  # Diagrams, flowcharts, etc.
 ├── auth_structure.txt           # Authentication and authorization structure documentation
+├── USERS/                       # Authentication
+│   ├── ELDER/                   # main(core) user
+│   │    └──README.md
+│   │    └──README.md
+│   ├── FAMILY/                  # fmaily member of elder
+│   │    └──README.md
+│   │    └──README.md
+│   └── CARETAKER/               # user who is help and live with elder
+│   │    └──README.md
+│   │    └──README.md
 ├── README.md                    # This file
 └── [Other project files]        # Additional source code and configuration
 ```
