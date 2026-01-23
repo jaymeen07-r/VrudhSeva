@@ -20,23 +20,47 @@ Vrudhseva is an intelligent elder-care platform that monitors health and safety 
 
 ```
 VrudhSeva/
-├── Assets/                      # Project assets directory
-│   └── images/                  # Image files and diagrams
-│       ├── .gitkeep             # Ensures directory is tracked
-│       └── [other image files]  # Diagrams, flowcharts, etc.
-├── auth_structure.txt           # Authentication and authorization structure documentation
-├── USERS/                       # Authentication
-│   ├── ELDER/                   # main(core) user
-│   │    └── README.md
-│   │    └── DOCUMENT.md
-│   ├── FAMILY/                  # fmaily member of elder
-│   │    └── README.md
-│   │    └── DOCUMENT.md
-│   └── CARETAKER/               # user who is help and live with elder
-│   │    └── README.md
-│   │    └── DOCUMENT.md
-├── README.md                    # This file
-└── [Other project files]        # Additional source code and configuration
+├── Assets/                          # Project-wide assets
+│   └── images/                      # Diagrams, flowcharts, UI mockups
+│       ├── .gitkeep                 # Ensures directory tracking
+│       └── [architecture diagrams] # RBAC, data flow, sequence diagrams
+│
+├── AUTH/                            # Authentication & Authorization
+│   ├── auth_structure.md            # Auth flow, RBAC, token strategy
+│   ├── permission_matrix.md         # Centralized permission table
+│   └── roles_definition.md          # Role hierarchy & scope
+│
+├── USERS/                           # User role documentation
+│   ├── ELDER/                       # Core (Primary) user
+│   │   ├── README.md                # Role overview (what & why)
+│   │   └── DOCUMENT.md              # Detailed flows, APIs, permissions
+│   │
+│   ├── FAMILY/                      # Family members of Elder
+│   │   ├── README.md                # Role overview
+│   │   └── DOCUMENT.md              # Primary vs Secondary flow & access
+│   │
+│   ├── CARETAKER/                   # On-ground support user
+│   │   ├── README.md                # Role overview
+│   │   └── DOCUMENT.md              # Care workflows & accountability
+│   │
+│   ├── ADMIN/                       # System administrator
+│   │   ├── README.md                # Admin responsibilities
+│   │   └── DOCUMENT.md              # User mgmt, RBAC, system control
+│   │
+│   └── DEVELOPER/                   # Platform developer
+│       ├── README.md                # Dev role & scope
+│       └── DOCUMENT.md              # Dev workflow, CI/CD, security
+│
+├── FLOWS/                           # Application-level flows
+│   ├── user_onboarding.md           # Elder → Family → Caretaker linking
+│   ├── emergency_flow.md            # SOS & alert escalation
+│   ├── health_data_flow.md          # Health data lifecycle
+│   └── offline_sync_flow.md         # Offline-first sync logic
+│
+├── README.md                        # Project overview & vision
+│
+└── [Source_Code]                    # App, backend, configs, etc.(Not provided becuase of project is on Active Development)
+
 ```
 
 ## System Architecture
