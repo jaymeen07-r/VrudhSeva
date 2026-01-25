@@ -13,12 +13,6 @@ All diagrams are referenced across:
 ## 📁 Directory Structure
 
 ```text
-Assets/
-└── images/
-    ├── .gitkeep
-    │
-    ├── architecture/
-    ├── user_flows/
   Assets/
 └── images/
     ├── .gitkeep
